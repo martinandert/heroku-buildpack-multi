@@ -1,13 +1,15 @@
-# Deprecated
+# heroku-buildpack-multi
 
-This project is deprecated and is no longer being maintained.
+Use multiple buildpacks on your app
 
-Please fork it to your own account and update your `BUILDPACK_URL`
+## Usage
 
-You can also check out Heroku's [built-in buildpack-multi support](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
+    $ heroku buildpacks:set https://github.com/martinandert/heroku-buildpack-multi.git
 
-Cloud Foundry users, amongst others, may wish to use a community-maintained and
-actively developed version of this buildpack, available at
-https://bitbucket.org/cf-utilities/cf-buildpack-multi/
+    $ cat .buildpacks
+    https://github.com/heroku/heroku-buildpack-nodejs.git#0198c71daa8
+    https://github.com/heroku/heroku-buildpack-ruby.git#v86
 
-Please check out my current project [Convox](https://convox.com) for all of your deployment needs!
+## License
+
+MIT
